@@ -3,7 +3,7 @@ import Image from "next/image";
 const HorizontalNav = () => {
   return (
     <header className="w-full h-56 lg:h-20 relative bg-zinc-800 flex">
-      <div className="flex flex-col lg:flex-row justify-center items-center lg: w-4/5 lg:gap-44 mx-auto my-auto">
+      <div className="flex flex-col lg:flex-row justify-center items-center lg: w-4/5 lg:gap-28 mx-auto my-auto">
         <div className="w-44 h-11 mx-auto mb-3 lg:mb-0 justify-center items-center inline-flex">
           <Image
             className="w-12 h-12"
@@ -16,33 +16,45 @@ const HorizontalNav = () => {
             Gym Manager
           </p>
         </div>
-        <div className="w-96 h-6 mt-1 mb-3 lg:mb-0 justify-center items-center gap-4 lg:gap-10 inline-flex mx-auto">
-          <a className="rounded-lg bg-yellow-500 py-2 px-2 lg:px-4 text-xs lg:text-base  text-white transition-all hover:shadow-lg hover:shadow-yellow-100/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none cursor-pointer" data-ripple-light="true">
+        <div className="inline-flex rounded-md">
+          <a
+            href="#"
+            className="border rounded-l-md bg-yellow-500   inline-flex items-center justify-center py-2 px-1 text-center text-sm font-normal text-gray-200 transition-all hover:text-white hover:bg-yellow-600 sm:px-6"
+          >
             Instructores
           </a>
-          <a className="rounded-lg bg-yellow-500 py-2 px-2 lg:px-4 text-xs lg:text-base  text-white transition-all hover:shadow-lg hover:shadow-yellow-100/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none cursor-pointer" data-ripple-light="true">
+          <a
+            href="#"
+            className="border bg-yellow-500   inline-flex items-center justify-center py-2 px-1 text-center text-sm font-normal text-gray-200 transition-all hover:text-white hover:bg-yellow-600 sm:px-6"
+          >
             Clases
           </a>
-          <a className="rounded-lg bg-yellow-500 py-2 px-2 lg:px-4 text-xs lg:text-base  text-white transition-all hover:shadow-lg hover:shadow-yellow-100/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none cursor-pointer" data-ripple-light="true">
+          <a
+            href="#"
+            className="border bg-yellow-500   inline-flex items-center justify-center py-2 px-1 text-center text-sm font-normal text-gray-200 transition-all hover:text-white hover:bg-yellow-600 sm:px-6"
+          >
             Planes
           </a>
-          <a className="rounded-lg bg-yellow-500 py-2 px-2 lg:px-4 text-xs lg:text-base  text-white transition-all hover:shadow-lg hover:shadow-yellow-100/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none cursor-pointer" data-ripple-light="true">
+          <a
+            href="#"
+            className="border rounded-r-md bg-yellow-500   inline-flex items-center justify-center py-2 px-1 text-center text-sm font-normal text-gray-200 transition-all hover:text-white hover:bg-yellow-600 sm:px-6"
+          >
             Horarios
           </a>
         </div>
 
-        <div className="flex items-center w-64 mx-auto h-10 bg-white rounded-lg ">
-          <div className="w-full">
+        <div className="flex items-center w- mx-auto h-10 rounded-lg">
+          <div className="w-full rounded-lg">
             <input
               type="search"
-              className="w-full px-4 py-1 h-10 text-gray-800 rounded-full focus:outline-none"
+              className="w-full px-4 py-1 h-10 text-gray-800 rounded-l-lg focus:outline-none"
               placeholder="search"
             />
           </div>
           <div>
             <button
               type="submit"
-              className="flex items-center bg-zinc-300 justify-center w-12 h-10 text-white rounded-r-lg hover:shadow-lg hover:shadow-lg hover:shadow-yellow-100/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none cursor-pointer"
+              className="flex items-center bg-zinc-300 justify-center w-12 h-10 text-white rounded-r-lg hover:shadow-lg hover:shadow-yellow-100/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none cursor-pointer"
             >
               <Image
                 className="search-alt"
