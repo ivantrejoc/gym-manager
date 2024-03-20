@@ -1,0 +1,188 @@
+.layout {
+  display: flex;
+  width: 34.5rem;
+  height: 24.4rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: var(--bg-color-ligth-theme, #e9e9e9);
+  box-sizing: border-box;
+  border-radius: 0.75rem;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.cardHeader {
+  display: flex;
+  padding: 1rem;
+  align-items: center;
+  align-self: stretch;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  gap: 12.5rem;
+}
+
+.textHeader {
+  display: flex;
+  width: 12.625rem;
+  height: 3.25rem;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.title {
+  width: 100%;
+  height: 2rem;
+  align-self: stretch;
+  color: var(--text-primary, rgba(0, 0, 0, 0.87));
+  font-feature-settings: "clig" off, "liga" off;
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 133.4%;
+  margin: 0;
+}
+
+.callToAction {
+  width: 100%;
+  height: 1.25rem;
+  align-self: stretch;
+  color: var(--text-secondary, rgba(0, 0, 0, 0.6));
+  font-feature-settings: "clig" off, "liga" off;
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 143%; /* 1.25125rem */
+  letter-spacing: 0.01063rem;
+  margin: 0;
+}
+
+.image {
+  width: 6.9375rem;
+  height: 6.5625rem;
+  background: cover no-repeat;
+}
+
+.cardContent {
+  display: flex;
+  width: 34.5rem;
+  height: 16.1rem;
+  box-sizing: border-box;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.form {
+  display: flex;
+  padding: 0 1rem;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+  align-self: stretch;
+}
+
+.input {
+  width: 31.125rem;
+  height: 3.5rem;
+  display: flex;
+  padding: var(--none, 0rem) 0.75rem;
+  flex-direction: column;
+  align-items: flex-start;
+  align-self: stretch;
+  border-radius: var(--borderRadius, 0.25rem);
+  border: 1px solid black;
+}
+
+.input::placeholder {
+  flex: 1 0 0;
+  color: rgba(0, 0, 0, 0.6);
+  font-family: Montserrat;
+  font-feature-settings: "clig" off, "liga" off;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.5rem; /* 150% */
+  letter-spacing: 0.00938rem;
+}
+
+.button {
+  display: flex;
+  width: 32.625rem;
+  height: 2.625rem;
+  margin: auto;
+  padding: 0.5rem 1.375rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-self: stretch;
+  border-radius: var(--borderRadius, 0.25rem);
+  background: var(--Colot-Buttons-light-theme, #972bd8);
+
+  /* elevation/2 */
+  box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2),
+    0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
+}
+
+.textButton {
+  color: var(--bg-color-ligth-theme, #e9e9e9);
+  font-feature-settings: "clig" off, "liga" off;
+
+  /* button/large */
+  font-family: Roboto;
+  font-size: 0.9375rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.625rem; /* 173.333% */
+  letter-spacing: 0.02875rem;
+  text-transform: uppercase;
+}
+
+.actions {
+  width: 15.5rem;
+  height: 1.25rem;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  box-sizing: border-box;
+  margin: auto 1rem;
+  gap: 0.5rem;
+}
+
+.linkText1 {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  width: 5.125rem;
+  height: 1.25rem;
+  color: var(--Colot-Buttons-light-theme, #972bd8);
+  font-feature-settings: "clig" off, "liga" off;
+  /* typography/body2 */
+  font-size: 0.75rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 143%; /* 1.25125rem */
+  letter-spacing: 0.01063rem;
+}
+
+.linkText2 {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  width: 9.875rem;
+  height: 1.25rem;
+  color: var(--Colot-Buttons-light-theme, #972bd8);
+  font-feature-settings: "clig" off, "liga" off;
+  /* typography/body2 */
+  font-size: 0.75rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 143%; /* 1.25125rem */
+  letter-spacing: 0.01063rem;
+}
