@@ -30,8 +30,7 @@ const LoginForm = () => {
             type="password"
             placeholder="Contraseña"
           />
-        </form>
-        <button className={loginFormStyles.button}>
+              <button className={loginFormStyles.button}>
             <p className={loginFormStyles.textButton}>Inicia Sesión</p>
         </button>
         <div className={loginFormStyles.actions}>
@@ -40,6 +39,8 @@ const LoginForm = () => {
             <a className={loginFormStyles.linkText2} href="">Olvidaste tu contraseña?
                 </a>
         </div>
+        </form>
+    
       </div>
     </div>
   );
