@@ -12,10 +12,13 @@ const LoginForm = () => {
               Ingresa tus credenciales
             </p>
           </div>
-          <Image className= {loginFormStyles.image} src={"/images/gym-manager.png"} 
-          width={1000}
-          height={1000}
-          alt="gym manager logo" />
+          <Image
+            className={loginFormStyles.image}
+            src={"/images/gym-manager.png"}
+            width={1000}
+            height={1000}
+            alt="gym manager logo"
+          />
         </div>
       </div>
       <div className={loginFormStyles.cardContent}>
@@ -30,17 +33,18 @@ const LoginForm = () => {
             type="password"
             placeholder="Contraseña"
           />
-              <button className={loginFormStyles.button}>
+          <button className={loginFormStyles.button}>
             <p className={loginFormStyles.textButton}>Inicia Sesión</p>
-        </button>
-        <div className={loginFormStyles.actions}>
-            <a className={loginFormStyles.linkText1} href="">Crear cuenta
-                </a>
-            <a className={loginFormStyles.linkText2} href="">Olvidaste tu contraseña?
-                </a>
-        </div>
+          </button>
+          <div className={loginFormStyles.actions}>
+            <a className={loginFormStyles.linkText1} href="">
+              Crear cuenta
+            </a>
+            <a className={loginFormStyles.linkText2} href="">
+              Olvidaste tu contraseña?
+            </a>
+          </div>
         </form>
-    
       </div>
     </div>
   );
