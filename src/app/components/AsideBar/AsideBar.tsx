@@ -34,11 +34,7 @@ const AsideBar = () => {
       default:
         break;
     }
-  };
-
-  // const toggleDropdown = () => {
-  //   setIsOpen(!isOpen);
-  // };
+  }; 
 
   return (
     <aside className={asideBarStyles.layout}>
