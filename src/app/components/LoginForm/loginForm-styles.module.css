@@ -123,25 +123,26 @@
   justify-content: center;
   align-items: center;
   align-self: stretch;
-  border-radius: var(--borderRadius, 0.25rem);
-  background: var(--Colot-Buttons-light-theme, #972bd8);
-
-  /* elevation/2 */
-  box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2),
-    0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.1);
+  border-radius: var(--borderRadius, 0.5rem);
+  background: var(--Colot-Buttons-light-theme, #7b1fa2);
+  -webkit-box-shadow: 0px 4px 5px 0px rgba(79, 79, 79, 0.63);
+  box-shadow: 0px 4px 5px 0px rgba(79, 79, 79, 0.63);
 }
 
 .button:hover {
-  background: var(--Colot-Buttons-light-theme, #4b1e97);
+  background: var(--Colot-Buttons-light-theme, #501FA3);
   cursor: pointer;
+  -moz-transform: scale(1.03);
+-webkit-transform: scale(1.03);
+-o-transform: scale(1.03);
+-ms-transform: scale(1.03);
+transform: scale(1.03);
 }
 
 .textButton {
   color: var(--bg-color-ligth-theme, #e9e9e9);
   font-feature-settings: "clig" off, "liga" off;
-
-  /* button/large */
-  font-family: Roboto;
+  /* button/large */  
   font-size: 0.9375rem;
   font-style: normal;
   font-weight: 500;

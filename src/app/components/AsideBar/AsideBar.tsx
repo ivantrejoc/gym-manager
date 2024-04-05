@@ -4,28 +4,33 @@ import Image from "next/image";
 import { useState } from "react";
 
 const AsideBar = () => {
-  
   const [isOpen, setIsOpen] = useState(false);
 
-  const toggleDropdown = () =>{
+  const toggleDropdown = () => {
     setIsOpen(!isOpen);
-  }
-
- 
+  };
 
   return (
     <aside className={asideBarStyles.layout}>
       <div className={asideBarStyles.container}>
-        <div className={asideBarStyles.content}>          
-           {/* clientes */}
-           <div
-            className={`${asideBarStyles.dropdown} ${isOpen ? asideBarStyles.isOpen : ''}`}
+        <div className={asideBarStyles.content}>
+          {/* clientes */}
+          <div
+            className={`${asideBarStyles.dropdown} ${
+              isOpen ? asideBarStyles.isOpen : ""
+            }`}
           >
-            <button className={asideBarStyles.dropwdownBtn}
-            onClick={toggleDropdown}>            
+            <button
+              className={asideBarStyles.dropwdownBtn}
+              onClick={toggleDropdown}
+            >
               <div className={asideBarStyles.buttonElements}>
-                <Image width={10} height={10} alt="icon" src={""} />
-                <p className={asideBarStyles.buttonTitle}> Clientes</p>
+                <div className={asideBarStyles.leftContent}>
+                  <Image width={15} height={15} alt="icon" src={"/aside-icons/users-group.png"} className={asideBarStyles.icons} />
+                  <p className={asideBarStyles.buttonTitle}> Clientes</p>
+                </div>
+
+                <Image width={15} height={14} alt="arrow" src={"/aside-icons/chevron-up.png"} className={asideBarStyles.icons} />
               </div>
             </button>
             <div className={asideBarStyles.submenu}>
@@ -33,17 +38,24 @@ const AsideBar = () => {
               <a href="#">Ver clientes</a>
             </div>
           </div>
-          
-         
+
           {/* ventas */}
           <div
-            className={`${asideBarStyles.dropdown} ${isOpen ? asideBarStyles.isOpen : ''}`}
+            className={`${asideBarStyles.dropdown} ${
+              isOpen ? asideBarStyles.isOpen : ""
+            }`}
           >
-            <button className={asideBarStyles.dropwdownBtn}
-            onClick={toggleDropdown}>
-              <div className={asideBarStyles.buttonElements}>
-                <Image width={10} height={10} alt="icon" src={""} />
-                <p className={asideBarStyles.buttonTitle}> Ventas</p>
+            <button
+              className={asideBarStyles.dropwdownBtn}
+              onClick={toggleDropdown}
+            >
+               <div className={asideBarStyles.buttonElements}>
+                <div className={asideBarStyles.leftContent}>
+                  <Image width={15} height={15} alt="icon" src={"/aside-icons/cart.png"} className={asideBarStyles.icons} />
+                  <p className={asideBarStyles.buttonTitle}> Ventas</p>
+                </div>
+
+                <Image width={15} height={14} alt="arrow" src={"/aside-icons/chevron-up.png"} className={asideBarStyles.icons} />
               </div>
             </button>
             <div className={asideBarStyles.submenu}>
@@ -51,15 +63,23 @@ const AsideBar = () => {
               <a href="#">Dashboard</a>
             </div>
           </div>
-{/* Instructores */}
-<div
-            className={`${asideBarStyles.dropdown} ${isOpen ? asideBarStyles.isOpen : ''}`}
+          {/* Instructores */}
+          <div
+            className={`${asideBarStyles.dropdown} ${
+              isOpen ? asideBarStyles.isOpen : ""
+            }`}
           >
-            <button className={asideBarStyles.dropwdownBtn}
-            onClick={toggleDropdown}>
-              <div className={asideBarStyles.buttonElements}>
-                <Image width={10} height={10} alt="icon" src={""} />
-                <p className={asideBarStyles.buttonTitle}> Instructores</p>
+            <button
+              className={asideBarStyles.dropwdownBtn}
+              onClick={toggleDropdown}
+            >
+               <div className={asideBarStyles.buttonElements}>
+                <div className={asideBarStyles.leftContent}>
+                  <Image width={15} height={15} alt="icon" src={"/aside-icons/edit-user.png"} className={asideBarStyles.icons} />
+                  <p className={asideBarStyles.buttonTitle}> Instructores</p>
+                </div>
+
+                <Image width={15} height={14} alt="arrow" src={"/aside-icons/chevron-up.png"} className={asideBarStyles.icons} />
               </div>
             </button>
             <div className={asideBarStyles.submenu}>
@@ -67,15 +87,23 @@ const AsideBar = () => {
               <a href="#">Ver instructores</a>
             </div>
           </div>
-{/* Clases */}
-<div
-            className={`${asideBarStyles.dropdown} ${isOpen ? asideBarStyles.isOpen : ''}`}
+          {/* Clases */}
+          <div
+            className={`${asideBarStyles.dropdown} ${
+              isOpen ? asideBarStyles.isOpen : ""
+            }`}
           >
-            <button className={asideBarStyles.dropwdownBtn}
-            onClick={toggleDropdown}>
-              <div className={asideBarStyles.buttonElements}>
-                <Image width={10} height={10} alt="icon" src={""} />
-                <p className={asideBarStyles.buttonTitle}> Clases</p>
+            <button
+              className={asideBarStyles.dropwdownBtn}
+              onClick={toggleDropdown}
+            >
+               <div className={asideBarStyles.buttonElements}>
+                <div className={asideBarStyles.leftContent}>
+                  <Image width={15} height={15} alt="icon" src={"/aside-icons/open-book.png"} className={asideBarStyles.icons} />
+                  <p className={asideBarStyles.buttonTitle}> Clases</p>
+                </div>
+
+                <Image width={15} height={14} alt="arrow" src={"/aside-icons/chevron-up.png"} className={asideBarStyles.icons} />
               </div>
             </button>
             <div className={asideBarStyles.submenu}>
@@ -83,15 +111,23 @@ const AsideBar = () => {
               <a href="#">Ver clases</a>
             </div>
           </div>
-{/* Planes */}
-<div
-            className={`${asideBarStyles.dropdown} ${isOpen ? asideBarStyles.isOpen : ''}`}
+          {/* Planes */}
+          <div
+            className={`${asideBarStyles.dropdown} ${
+              isOpen ? asideBarStyles.isOpen : ""
+            }`}
           >
-            <button className={asideBarStyles.dropwdownBtn}
-            onClick={toggleDropdown}>
-              <div className={asideBarStyles.buttonElements}>
-                <Image width={10} height={10} alt="icon" src={""} />
-                <p className={asideBarStyles.buttonTitle}> Planes</p>
+            <button
+              className={asideBarStyles.dropwdownBtn}
+              onClick={toggleDropdown}
+            >
+               <div className={asideBarStyles.buttonElements}>
+                <div className={asideBarStyles.leftContent}>
+                  <Image width={15} height={15} alt="icon" src={"/aside-icons/clipboard-list.png"} className={asideBarStyles.icons} />
+                  <p className={asideBarStyles.buttonTitle}> Planes</p>
+                </div>
+
+                <Image width={15} height={14} alt="arrow" src={"/aside-icons/chevron-up.png"} className={asideBarStyles.icons} />
               </div>
             </button>
             <div className={asideBarStyles.submenu}>
@@ -99,15 +135,23 @@ const AsideBar = () => {
               <a href="#">Ver planes</a>
             </div>
           </div>
-{/* Calendario */}
-<div
-            className={`${asideBarStyles.dropdown} ${isOpen ? asideBarStyles.isOpen : ''}`}
+          {/* Calendario */}
+          <div
+            className={`${asideBarStyles.dropdown} ${
+              isOpen ? asideBarStyles.isOpen : ""
+            }`}
           >
-            <button className={asideBarStyles.dropwdownBtn}
-            onClick={toggleDropdown}>
-              <div className={asideBarStyles.buttonElements}>
-                <Image width={10} height={10} alt="icon" src={""} />
-                <p className={asideBarStyles.buttonTitle}> Calendario</p>
+            <button
+              className={asideBarStyles.dropwdownBtn}
+              onClick={toggleDropdown}
+            >
+               <div className={asideBarStyles.buttonElements}>
+                <div className={asideBarStyles.leftContent}>
+                  <Image width={15} height={15} alt="icon" src={"/aside-icons/calendar-month.png"} className={asideBarStyles.icons} />
+                  <p className={asideBarStyles.buttonTitle}> Calendario</p>
+                </div>
+
+                <Image width={15} height={14} alt="arrow" src={"/aside-icons/chevron-up.png"} className={asideBarStyles.icons} />
               </div>
             </button>
             <div className={asideBarStyles.submenu}>
