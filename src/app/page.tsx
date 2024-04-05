@@ -1,7 +1,17 @@
-import Image from "next/image";
+import AsideBar from "./components/AsideBar/AsideBar";
+import Header from "./components/Header/Header";
+
+
 
 export default function Home() {
   return (
-    <h1>APP DE GYM</h1>
+    <div>
+      <Header />
+      <AsideBar />
+      
+    </div>
+      
+    
+   
   );
 }
