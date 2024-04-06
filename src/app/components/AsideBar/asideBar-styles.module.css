@@ -38,19 +38,19 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0.25rem;
+  gap: 0rem;
 }
 
 /* Dropdown */
-.dropdown {   
+.dropdown {
   width: 90%;
-  height: 7.69rem; 
+  height: 14.4vh;
   position: relative;
   display: inline-block;
   padding: var(--0, 0rem);
   justify-content: center;
   align-items: center;
-  gap: var(--15, 0.375rem);
+  gap: var(--15, 0rem);
 }
 .dropwdownBtn {
   width: 100%;
@@ -66,7 +66,7 @@
   background: var(--gray-100, #f3f4f6);
 }
 
-.buttonElements { 
+.buttonElements {
   width: 95%;
   height: 1.25rem;
   display: flex;
@@ -91,7 +91,7 @@
 
 .buttonTitle {
   color: var(--gray-900, var(--gray-900, #111928));
-  font-size: 1rem;
+  font-size: 0.75rem;
   font-style: normal;
   font-weight: 500;
   line-height: 100%; /* 1rem */
@@ -101,7 +101,6 @@
   display: none;
   top: 100%;
   background-color: #f1f1f1;
-  /* border-radius: 0.5rem; */
   width: 100%;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
@@ -114,7 +113,7 @@
   text-decoration: none;
   display: block;
   color: #111928;
-  font-size: 0.8rem;
+  font-size: 0.7rem;
   font-style: normal;
   font-weight: 400;
   line-height: 100%;
@@ -128,8 +127,8 @@
 }
 
 .dropdown.isOpen {
-  height: fit-content;
-  margin-bottom: 1.5rem;
+  /* height: fit-content; */
+  margin-bottom: 0.5rem;
   /* max-height: 7.69rem; */
 }
 
