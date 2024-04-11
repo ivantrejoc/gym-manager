@@ -4,28 +4,25 @@
 
 :root {
   --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --background-rgb: 233, 233, 233;
+  --background-start-rgb: 243, 185, 185;
+  --background-end-rgb: 233, 233, 233;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background-rgb: 239, 239, 239, 1;
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 239, 239, 239, 1;
-    --background-end-rgb: 0, 0, 0;
+    --foreground-rgb: 0, 0, 0;
+    --background-rgb: 233, 233, 233;
+    --background-start-rgb: 243, 185, 185;
+    --background-end-rgb: 233, 233, 233;
   }
 }
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: rgb(var(--background-start-rgb));
-  width: 1728px;
-  height: 1117px;
-  top: -1167px;
-  left: -430px;
-  gap: 0px;
-  opacity: 0px;
+  background: rgb(var(--background-rgb));
+  width: 100vw;
+  height: 100vh;
 }
 
 @layer utilities {

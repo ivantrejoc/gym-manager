@@ -1,0 +1,60 @@
+.box {
+    width: 8.8125rem;
+    height: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1 0 0;
+  }
+  
+  .box .chip {
+    
+    width: 5.0625rem;
+    height: 2rem;
+    display: flex;
+    padding: 0.25rem;
+    align-items: center;
+    border-radius: 6.25rem;
+    background: var(--action-selected, rgba(0, 0, 0, 0.08));
+  }
+  
+  .chip .avatar {    
+    width: 1.5rem;
+    height: 1.5rem;
+    display: flex;  
+    top: 0.375rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 6.25rem;
+    background: rgb(120, 218, 120);
+  
+    color: var(--background-paper-elevation-0, #fff);
+    text-align: center;
+    font-feature-settings: "clig" off, "liga" off;
+  
+    /* avatar/initialsMd */
+    font-family: Roboto;
+    font-size: 0.85rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 0.75rem; /* 100% */
+  }
+  
+  .chip .label {
+    width: 3.0625rem;
+    height: 1.5rem;
+    display: flex;
+    padding: 0.1875rem 0.375rem;
+    flex-direction: column;
+    align-items: flex-start;
+    color: var(--text-primary, rgba(0, 0, 0, 0.87));
+    font-feature-settings: "clig" off, "liga" off;
+    /* chip/label */
+    font-size: 0.8125rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.125rem; /* 138.462% */
+    letter-spacing: 0.01rem;
+  }
