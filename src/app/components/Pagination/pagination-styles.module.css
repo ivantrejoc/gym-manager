@@ -1,0 +1,110 @@
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  padding: 0.125rem 0rem;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 1.625rem;
+  align-self: stretch;
+}
+
+.selector {
+  width: 8.375rem;
+  height: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.65rem;
+}
+
+.select {
+  width: 2.375rem;
+  height: 1.5rem;
+  padding-left: 0.5rem;
+  background-image: url("../../../../public/options-arrow.svg");
+  color: var(--text-primary, rgba(0, 0, 0, 0.87));
+  background-repeat: no-repeat;
+  background-position: right center;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  text-align: left;
+  font-feature-settings: "clig" off, "liga" off;
+  /* typography/caption */
+  font-size: 0.75rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 166%; /* 1.245rem */
+  letter-spacing: 0.025rem;
+}
+
+.text {
+  color: var(--text-secondary, rgba(0, 0, 0, 0.6));
+  font-feature-settings: "clig" off, "liga" off;
+  /* typography/caption */
+  justify-content: center;
+  text-align: right;
+  font-size: 0.75rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 166%; /* 1.245rem */
+  letter-spacing: 0.025rem;
+}
+
+.options {
+  color: var(--text-primary, rgba(0, 0, 0, 0.87));
+  font-feature-settings: "clig" off, "liga" off;
+  /* typography/caption */
+  font-size: 0.75rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 166%; /* 1.245rem */
+  letter-spacing: 0.025rem;
+}
+
+.pageIndex {
+  width: 4.1875rem;
+  height: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.textIndex {
+  color: var(--text-primary, rgba(0, 0, 0, 0.87));
+  font-feature-settings: "clig" off, "liga" off;
+  /* typography/caption */
+  font-size: 0.75rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 166%; /* 1.245rem */
+  letter-spacing: 0.025rem;
+}
+
+.buttonsContainer {
+  width: 5rem;
+  height: 2.5rem;
+  display: flex;
+  align-items: flex-start;
+}
+.button {
+  width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  padding: 0.5rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.button:hover {
+  background: rgb(233, 233, 233);
+  cursor: pointer;
+  -moz-transform: scale(1.02);
+  -webkit-transform: scale(1.02);
+  -o-transform: scale(1.02);
+  -ms-transform: scale(1.02);
+  transform: scale(1.02);
+}

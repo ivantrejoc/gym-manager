@@ -1,3 +1,4 @@
+import { Pagination } from "../Pagination";
 import TableRow from "../TableRow/TableRow";
 import clientsDasboardStyles from "./clientsDashboard-styles.module.css";
 
@@ -48,15 +49,18 @@ const ClientsDashboard = () => {
                 <p className={clientsDasboardStyles.acciones}>Acciones</p>
               </th>
             </tr>
-          </thead>  
-         
-          <tbody className={clientsDasboardStyles.tbody}>          
-          <TableRow />
-          <TableRow />
-          <TableRow />
-          <TableRow />
-          <TableRow />          
+          </thead>
+
+          <tbody className={clientsDasboardStyles.tbody}>
+            <TableRow />
+            <TableRow />
+            <TableRow />
+            <TableRow />
+            <TableRow />
           </tbody>
+          <tfoot className={clientsDasboardStyles.footerLayout}>
+            <Pagination />
+          </tfoot>
         </table>
       </div>
     </div>

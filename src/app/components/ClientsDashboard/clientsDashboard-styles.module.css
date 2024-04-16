@@ -1,8 +1,8 @@
 /* Estilos layout */
-.layout {
+.layout { 
   display: flex;
   width: 83vw;
-  height: 80vh;
+  height: 70vh;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -16,9 +16,10 @@
   border-radius: var(--borderRadius, 0.25rem);
 }
 
+
 /* Estilos header */
-.header {
-  height: 4.5rem;
+.header {  
+  height: 10vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -55,8 +56,7 @@
   align-self: stretch;
   margin: 0;
   padding: 0rem 0.25rem;
-  /* typography/body2 */
-  font-family: Roboto;
+  /* typography/body2 */  
   font-size: 0.875rem;
   font-style: normal;
   font-weight: 400;
@@ -75,12 +75,10 @@
 }
 
 /* Estilos Table */
-.tableContent {
-  background: pink;
+.tableContent {  
   width: 100%;
-  height: 100%;
+  height: 60vh;
   display: flex;
-  /* padding: 1rem; */
   flex-direction: column;
   align-items: center;
   align-self: stretch;
@@ -100,7 +98,7 @@
   height: 2.83rem;
 }
 
-.frame {  
+.frame {
   height: 2.25rem;
   display: flex;
   flex-direction: column;
@@ -116,7 +114,6 @@
   border: var(--none, 1px) solid
     var(--_components-input-outlined-enabledBorder, rgba(0, 0, 0, 0.23));
   font-feature-settings: "clig" off, "liga" off;
-
   /* input/value */
   font-size: 1rem;
   font-style: normal;
@@ -138,7 +135,7 @@
 /* Estilos Table */
 .table {  
   width: 100%;
-  height: 19rem;
+  height: 80vh;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -146,7 +143,7 @@
 }
 
 /* Estilos Header */
-.rowLayout {  
+.rowLayout {
   width: 100%;
   height: 3rem;
   display: flex;
@@ -243,6 +240,31 @@
   letter-spacing: 0.01063rem;
 }
 
-.tbody{  
-  width: 100%;
+/* Estilos row */
+.tbody {
+    width: 100%;
+  height: 37vh;
 }
+
+/* Estilos footer */
+
+.footerLayout { 
+  width: 100%;
+  height: 7vh;
+  }
+
+  /* Media queries */
+  @media only screen and (min-width: 1440px){
+    .layout{
+      height: 82vh;
+      margin-left: 12rem;
+    }
+
+    .tableContent{
+      height: 70vh;
+    }
+
+    .tbody{
+      height: 49vh;
+    }
+  }
