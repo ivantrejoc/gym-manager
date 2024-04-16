@@ -74,7 +74,7 @@
   gap: 1rem;
 }
 .leftContent {
-  width: 8.0625rem;
+   width: 8.0625rem;
   height: 1.25rem;
   display: flex;
   flex-direction: row;
@@ -94,7 +94,7 @@
 }
 
 .buttonTitle {
-  color: var(--gray-900, var(--gray-900, #111928));
+    color: var(--gray-900, var(--gray-900, #111928));
   font-size: 0.75rem;
   font-style: normal;
   font-weight: 500;
@@ -144,4 +144,15 @@
   -o-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
   transform: rotate(180deg);
+}
+
+@media only screen and (max-width: 992px) {
+  .leftContent {
+    width: 90%;
+    gap: 0.3rem;
+  }
+
+  .buttonTitle {
+    font-size: 0.4rem;
+  }
 }
