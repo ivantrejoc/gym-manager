@@ -14,13 +14,13 @@
   flex-shrink: 0;
 }
 
-.container {
+.container {  
   width: 95vw;
   height: 3rem;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  gap: 46.5rem;
+  gap: 40vh;
   box-sizing: border-box;
 }
 
@@ -30,7 +30,7 @@
   top: 0;
 }
 
-.userSection {
+.userSection { 
   display: flex;
   width: 25.0625rem;
   justify-content: center;
@@ -125,4 +125,11 @@ transform: scale(1.03);
   font-weight: 500;
   line-height: 1.5rem; /* 171.429% */
   letter-spacing: 0.025rem;
+}
+
+/* Media queries */
+@media only screen and (min-width: 1440px){
+  .container{
+    gap: 70vh;
+  }
 }

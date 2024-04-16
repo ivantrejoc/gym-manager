@@ -4,8 +4,8 @@ import Image from "next/image";
 
 const Pagination = () => {
   return (
-    <div className={paginationStyles.container}>
-        <div className={paginationStyles.selector}>
+    <tr className={paginationStyles.container}>
+        <td className={paginationStyles.selector}>
             <p className={paginationStyles.text}>Filas por pag:</p>
             <select name="page" id="page" className={paginationStyles.select}>
                 <option value="1" className={paginationStyles.options}>1</option>
@@ -14,11 +14,11 @@ const Pagination = () => {
                 <option value="4" className={paginationStyles.options}>4</option>
                 <option value="5" className={paginationStyles.options}>5</option>
             </select>
-        </div>
-        <div className={paginationStyles.pageIndex}>
+        </td>
+        <td className={paginationStyles.pageIndex}>
             <p className={paginationStyles.textIndex}>1-5 de 13</p>
-        </div>
-        <div className={paginationStyles.buttonsContainer}>
+        </td>
+        <td className={paginationStyles.buttonsContainer}>
             <button type='button' className={paginationStyles.button}> <Image
             src="/left-arrow.svg"
             width={24}
@@ -29,8 +29,8 @@ const Pagination = () => {
             width={24}
             height={24}
             alt="arrow" /></button>
-        </div>
-    </div>
+        </td>
+    </tr>
   )
 }
 export default Pagination
