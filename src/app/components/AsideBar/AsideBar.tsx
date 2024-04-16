@@ -67,7 +67,7 @@ const AsideBar = () => {
                   height={14}
                   alt="arrow"
                   src={"/aside-icons/chevron-up.png"}
-                  className={asideBarStyles.icons}
+                  className={asideBarStyles.arrow}
                 />
               </div>
             </button>
@@ -104,7 +104,7 @@ const AsideBar = () => {
                   height={14}
                   alt="arrow"
                   src={"/aside-icons/chevron-up.png"}
-                  className={asideBarStyles.icons}
+                  className={asideBarStyles.arrow}
                 />
               </div>
             </button>
@@ -140,7 +140,7 @@ const AsideBar = () => {
                   height={14}
                   alt="arrow"
                   src={"/aside-icons/chevron-up.png"}
-                  className={asideBarStyles.icons}
+                  className={asideBarStyles.arrow}
                 />
               </div>
             </button>
@@ -176,7 +176,7 @@ const AsideBar = () => {
                   height={14}
                   alt="arrow"
                   src={"/aside-icons/chevron-up.png"}
-                  className={asideBarStyles.icons}
+                  className={asideBarStyles.arrow}
                 />
               </div>
             </button>
@@ -212,7 +212,7 @@ const AsideBar = () => {
                   height={14}
                   alt="arrow"
                   src={"/aside-icons/chevron-up.png"}
-                  className={asideBarStyles.icons}
+                  className={asideBarStyles.arrow}
                 />
               </div>
             </button>
@@ -248,7 +248,7 @@ const AsideBar = () => {
                   height={14}
                   alt="arrow"
                   src={"/aside-icons/chevron-up.png"}
-                  className={asideBarStyles.icons}
+                  className={asideBarStyles.arrow}
                 />
               </div>
             </button>

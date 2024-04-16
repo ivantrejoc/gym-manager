@@ -1,6 +1,6 @@
 /* Box */
 .layout {
-  position: fixed;  
+  position: fixed;
   display: flex;
   width: 12vw;
   height: 90vh;
@@ -88,6 +88,11 @@
   padding: 0;
 }
 
+.arrow {
+  margin: 0;
+  padding: 0;
+}
+
 .buttonTitle {
   color: var(--gray-900, var(--gray-900, #111928));
   font-size: 0.75rem;
@@ -126,11 +131,17 @@
 }
 
 .dropdown.isOpen {
-  /* height: fit-content; */
   margin-bottom: 0.5rem;
-  /* max-height: 7.69rem; */
 }
 
 .dropdown.isOpen .submenu {
   display: block;
+}
+
+.dropdown.isOpen .arrow {
+  -moz-transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
 }
