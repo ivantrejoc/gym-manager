@@ -104,7 +104,8 @@ const DatosMedicos = () => {
             control={<Checkbox />}
             labelPlacement="start"
             label="Medicación"
-            sx={{ m: 0 }}          />
+            sx={{ m: 0 }}
+          />
 
           <TextField
             size="small"
