@@ -19,9 +19,11 @@ const DatosBasicos = () => {
           label="Identificación:"
           variant="outlined"
           size="small"
-                  sx={{                   
-                    minWidth: 120, maxWidth: 300 }}
-                    className={styles.id}
+          sx={{
+            minWidth: 120,
+            maxWidth: 300
+          }}
+          className={styles.id}
         />
         <FormControl
           size="small"
@@ -46,8 +48,11 @@ const DatosBasicos = () => {
           </Select>
         </FormControl>
         <div className={styles.activo}>
-          <p className={styles.text}>Actívo</p>
-          <Checkbox defaultChecked className={styles.checkBox} />
+          <FormControlLabel
+            control={<Checkbox />}
+            labelPlacement="start"
+            label="Activo"
+          />
         </div>
       </div>
       <div className={styles.nameContainer}>
@@ -80,7 +85,7 @@ const DatosBasicos = () => {
       </div>
 
       <div className={styles.addressContainer}>
-      <TextField
+        <TextField
           required
           id="outlined-required"
           label="Dirección 1:"
@@ -107,17 +112,15 @@ const DatosBasicos = () => {
             }
           }}
           className={styles.address}
-        />    
-
+        />
       </div>
       <div className={styles.countryContainer}>
-    <TextField
+        <TextField
           required
           id="outlined-required"
           label="País:"
           variant="outlined"
           size="small"
-          
           sx={{
             "& .MuiOutlinedInput-root": {
               width: 1
@@ -131,7 +134,6 @@ const DatosBasicos = () => {
           label="Provincia:"
           variant="outlined"
           size="small"
-          
           sx={{
             "& .MuiOutlinedInput-root": {
               width: 1
@@ -145,7 +147,6 @@ const DatosBasicos = () => {
           label="Ciudad:"
           variant="outlined"
           size="small"
-          
           sx={{
             "& .MuiOutlinedInput-root": {
               width: 1
@@ -153,15 +154,14 @@ const DatosBasicos = () => {
           }}
           className={styles.country}
         />
-    </div>
-    <div className={styles.contactContainer}>
-    <TextField
+      </div>
+      <div className={styles.contactContainer}>
+        <TextField
           required
           id="outlined-required"
           label="Telef Fijo:"
           variant="outlined"
           size="small"
-          
           sx={{
             "& .MuiOutlinedInput-root": {
               width: 1
@@ -175,7 +175,6 @@ const DatosBasicos = () => {
           label="Telef Móvil:"
           variant="outlined"
           size="small"
-          
           sx={{
             "& .MuiOutlinedInput-root": {
               width: 1
@@ -189,7 +188,7 @@ const DatosBasicos = () => {
           label="Email:"
           variant="outlined"
           size="small"
-          fullWidth          
+          fullWidth
           sx={{
             "& .MuiOutlinedInput-root": {
               width: 1
@@ -197,8 +196,7 @@ const DatosBasicos = () => {
           }}
           className={styles.country}
         />
-
-    </div>
+      </div>
     </form>
   );
 };
