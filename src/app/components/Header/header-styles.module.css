@@ -14,7 +14,7 @@
   flex-shrink: 0;
 }
 
-.container {  
+.container {
   width: 95vw;
   height: 3rem;
   display: flex;
@@ -30,7 +30,7 @@
   top: 0;
 }
 
-.userSection { 
+.userSection {
   display: flex;
   width: 25.0625rem;
   justify-content: center;
@@ -107,19 +107,19 @@
 }
 
 .button:hover {
-  background: var(--Colot-Buttons-light-theme, #501FA3);
+  background: var(--Colot-Buttons-light-theme, #501fa3);
   cursor: pointer;
   -moz-transform: scale(1.03);
--webkit-transform: scale(1.03);
--o-transform: scale(1.03);
--ms-transform: scale(1.03);
-transform: scale(1.03);
+  -webkit-transform: scale(1.03);
+  -o-transform: scale(1.03);
+  -ms-transform: scale(1.03);
+  transform: scale(1.03);
 }
 
 .textButton {
   width: 2.875rem;
   height: 1.5rem;
-  color: var(--secondary-contrast, #fff);  
+  color: var(--secondary-contrast, #fff);
   font-size: 0.875rem;
   font-style: normal;
   font-weight: 500;
@@ -128,8 +128,26 @@ transform: scale(1.03);
 }
 
 /* Media queries */
-@media only screen and (min-width: 1440px){
-  .container{
+@media only screen and (min-width: 1440px) {
+  .container {
     gap: 70vh;
+  }
+
+  .name {
+    font-size: 1rem;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .name {
+    font-size: 0.75rem;
+    line-height: 200%; /* 1.5rem */
+    letter-spacing: 0.00738rem;
+  }
+
+  .role {
+    font-size: 0.55rem;
+    line-height: 200%; /* 1.5rem */
+    letter-spacing: 0.00738rem;
   }
 }
