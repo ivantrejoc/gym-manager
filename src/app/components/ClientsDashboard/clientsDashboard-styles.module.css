@@ -1,5 +1,5 @@
 /* Estilos layout */
-.layout { 
+.layout {
   display: flex;
   width: 83vw;
   height: 70vh;
@@ -9,17 +9,16 @@
   margin-left: 9rem;
   margin-top: 3rem;
   padding: 0.3rem;
-  background: var(--background-paper-elevation-1, #fff);
+  background:#FDFDFD;
   /* elevation/1 */
   box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.12),
     0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 2px 1px -1px rgba(0, 0, 0, 0.2);
   border-radius: var(--borderRadius, 0.25rem);
 }
 
-
 /* Estilos header */
-.header {  
-  height: 10vh;
+.header {
+  height: 9vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -56,7 +55,7 @@
   align-self: stretch;
   margin: 0;
   padding: 0rem 0.25rem;
-  /* typography/body2 */  
+  /* typography/body2 */
   font-size: 0.875rem;
   font-style: normal;
   font-weight: 400;
@@ -75,9 +74,9 @@
 }
 
 /* Estilos Table */
-.tableContent {  
+.tableContent {
   width: 100%;
-  height: 60vh;
+  height: 59vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -86,16 +85,17 @@
 
 /* Estilos search */
 .toolBar {
-  height: 4.5rem;
+  /* background: plum; */
+  height: 4rem;
   display: flex;
-  padding: 0 0.75rem;
+  padding: 0.25rem 0 0 0.25rem;
   align-items: center;
   align-self: stretch;
 }
 
 .search {
   width: 18.75rem;
-  height: 2.83rem;
+  height: 2rem;
 }
 
 .frame {
@@ -133,7 +133,7 @@
 }
 
 /* Estilos Table */
-.table {  
+.table {
   width: 100%;
   height: 80vh;
   display: flex;
@@ -242,29 +242,29 @@
 
 /* Estilos row */
 .tbody {
-    width: 100%;
+  width: 100%;
   height: 37vh;
 }
 
 /* Estilos footer */
 
-.footerLayout { 
+.footerLayout {
   width: 100%;
   height: 7vh;
+}
+
+/* Media queries */
+@media only screen and (min-width: 1440px) {
+  .layout {
+    height: 82vh;
+    margin-left: 12rem;
   }
 
-  /* Media queries */
-  @media only screen and (min-width: 1440px){
-    .layout{
-      height: 82vh;
-      margin-left: 12rem;
-    }
-
-    .tableContent{
-      height: 70vh;
-    }
-
-    .tbody{
-      height: 49vh;
-    }
+  .tableContent {
+    height: 70vh;
   }
+
+  .tbody {
+    height: 49vh;
+  }
+}

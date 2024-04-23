@@ -1,0 +1,144 @@
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 0.8rem;
+  flex-shrink: 0;
+  box-sizing: border-box;
+}
+
+.idContainer {
+  width: 100%;
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+  gap: 7%;
+  box-sizing: border-box;
+}
+
+.id {
+  display: flex;
+  width: 34%;
+  flex-direction: column;
+  align-items: flex-start;
+  flex-shrink: 0;
+  box-sizing: border-box;
+}
+
+.selectContainer {
+  display: flex;
+  width: 34%;
+  flex-direction: column;
+  align-items: flex-start;
+  flex-shrink: 0;
+  box-sizing: border-box;
+}
+
+.select {
+  width: 100%;
+}
+
+.activo {
+  width: 16%;
+  height: 1.5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.text {
+  width: 80%;
+  color: var(--text-secondary, rgba(0, 0, 0, 0.6));
+  font-feature-settings: "clig" off, "liga" off;
+  /* input/value */
+  font-size: 0.8rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.5rem; /* 150% */
+  letter-spacing: 0.00938rem;
+}
+
+.checkBox {
+  background: green;
+  margin: 0;
+  padding: 0;
+}
+
+.nameContainer {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  align-items: center;
+  gap: 8%;
+  box-sizing: border-box;
+}
+
+.name {
+  display: flex;
+  width: 46%;
+  height: 2.5rem;
+  flex-direction: column;
+  align-items: flex-start;
+  flex-shrink: 0;
+  box-sizing: border-box;
+}
+
+.addressContainer {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.1625rem;
+  box-sizing: border-box;
+}
+
+.address {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: flex-start;
+  box-sizing: border-box;
+}
+
+.countryContainer {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  align-items: center;
+  gap: 0.65rem;
+  box-sizing: border-box;
+}
+
+.country {
+  display: flex;
+  width: 31.9%;
+  flex-direction: column;
+  align-items: flex-start;
+  flex-shrink: 0;
+  box-sizing: border-box;
+}
+
+.contactContainer {
+  width: 50%;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1.1625rem;
+  box-sizing: border-box;
+}
+
+.tel {
+  display: flex;
+  width: 75%;
+  flex-direction: column;
+  align-items: flex-start;
+  box-sizing: border-box;
+}

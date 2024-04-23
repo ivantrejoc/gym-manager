@@ -72,8 +72,8 @@ const AsideBar = () => {
               </div>
             </button>
             <div className={asideBarStyles.submenu}>
-              <a href="#">Crear clientes</a>
-              <a href="#">Ver clientes</a>
+              <a href="#">Crear cliente</a>
+              <a href="/clients">Ver clientes</a>
             </div>
           </div>
 
