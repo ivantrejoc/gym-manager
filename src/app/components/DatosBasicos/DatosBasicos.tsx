@@ -19,12 +19,14 @@ const DatosBasicos = () => {
           label="Identificación:"
           variant="outlined"
           size="small"
-          className={styles.id}
+                  sx={{                   
+                    minWidth: 120, maxWidth: 300 }}
+                    className={styles.id}
         />
         <FormControl
           size="small"
           variant="outlined"
-          sx={{ m: 1, minWidth: 120, maxWidth: 300 }}
+          sx={{ minWidth: 120, maxWidth: 300 }}
           className={styles.selectContainer}
         >
           <InputLabel id="select-label">Tipo:</InputLabel>
