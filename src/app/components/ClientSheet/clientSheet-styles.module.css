@@ -48,3 +48,38 @@ gap: 0.75rem;
 flex-shrink: 0;
 box-sizing: border-box;
 }
+
+@media screen and (max-width: 768px) {
+
+.sheet{
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.87rem;
+ }
+
+.leftSide{
+  background: lightyellow;
+  height: 100%;
+  width: 100%;
+  display: flex;
+align-items: flex-start;
+box-sizing: border-box
+}
+.verticalDivider{
+  display: none;
+}
+
+.rightSide{
+  background: skyblue;
+  height: fit-content;
+  width:  100%;
+  display: flex;
+/* flex-direction: column; */
+align-items: flex-start;
+justify-content: flex-end;
+gap: 0.75rem;
+flex-shrink: 0;
+box-sizing: border-box;
+}
+
+ }

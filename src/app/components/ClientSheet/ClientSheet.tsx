@@ -13,7 +13,7 @@ const ClientSheet = () => {
             </div>
             <Divider orientation="vertical" sx={{
               height: 1
-            }} />
+            }} className={styles.verticalDivider} />
             <div className={styles.rightSide}>
                 <DatosMedicosSheet />
             </div>

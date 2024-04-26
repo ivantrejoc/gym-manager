@@ -46,8 +46,9 @@
   display: flex;
   width: 100%;
   height: auto;
-  align-items: flex-start;
-  gap: 3%;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1.7%;
   box-sizing: border-box;
 }
 
@@ -79,7 +80,7 @@
 }
 
 .registrationDate {
-  width: 27%;
+  width: 30%;
   height: fit-content;
   display: flex;
   flex-direction: column;

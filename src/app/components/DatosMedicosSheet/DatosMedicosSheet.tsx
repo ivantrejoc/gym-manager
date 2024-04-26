@@ -99,7 +99,7 @@ const DatosMedicosSheet = () => {
               </ListSubheader>
             }
           >
-            <ListItem sx={{ width: 1, height: 1 / 4 }}>
+            <ListItem sx={{ width: 1}}>
               <p className={styles.instructor}>TRX</p>
             </ListItem>
             <ListItem sx={{ width: 1 }}>
