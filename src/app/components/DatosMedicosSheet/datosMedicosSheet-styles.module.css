@@ -1,5 +1,4 @@
 .container {
-  background: plum;
   display: flex;
   width: 100%;
   height: 93.5%;
@@ -11,7 +10,6 @@
 }
 
 .medicDataContainer {
-  background: salmon;
   display: flex;
   width: 100%;
   flex-direction: column;
@@ -20,7 +18,6 @@
 }
 
 .titleContainer {
-  background: gold;
   display: flex;
   width: 100%;
   height: auto;
@@ -74,7 +71,6 @@
 }
 
 .diseasesContainer {
-  background: lightgreen;
   display: flex;
   width: 100%;
   height: fit-content;
@@ -84,7 +80,6 @@
 }
 
 .diseases {
-  background: gold;
   width: 45%;
   display: flex;
   flex-direction: column;
@@ -92,7 +87,6 @@
 }
 
 .details {
-  background: gold;
   width: 70%;
   display: flex;
   flex-direction: column;
@@ -100,8 +94,7 @@
 }
 
 .instructorsContainer {
-  background: lightgreen;
-  height: 23vh;
+  height: 20vh;
   width: 100%;
   display: flex;
   align-items: center;
@@ -109,14 +102,13 @@
 }
 
 .list {
-  background: gold;
   width: 30%;
   height: 100%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   box-sizing: border-box;
-  padding: var(--none, 0rem) var(--1, 0.5rem);
+  /* padding: var(--none, 0rem) var(--1, 0.5rem); */
   flex-direction: column;
   align-items: flex-start;
   border-radius: 0.25rem;
@@ -124,17 +116,16 @@
 }
 
 .instructor {
-  color: #000;
-  font-size: 0.65rem;
+  ccolor: #000;
+  font-size: 0.7375rem;
   font-style: normal;
-  font-weight: 500;
-  line-height: 1.5rem; /* 171.429% */
+  font-weight: 400;
+  line-height: 1.5rem; /* 160% */
   letter-spacing: 0.025rem;
 }
 
 .notesContainer {
-  background: lightgreen;
-  height: 14.5vh;
+  height: 22vh;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -143,7 +134,6 @@
 }
 
 .notes {
-  background: gold;
   display: flex;
   height: 100%;
   width: 100%;
@@ -156,7 +146,6 @@
 }
 
 .buttonGroup {
-  background: lightgreen;
   width: 100%;
   display: flex;
   justify-content: flex-end;
@@ -207,22 +196,35 @@
     width: 100%;
     height: fit-content;
     flex-direction: column;
-    
+  }
+
+  .medicDataContainer {
+    /* gap: 0.3rem; */
   }
 
   .diseases {
     width: 30%;
   }
 
-  .instructorsContainer {    
-    height: 10vh;    
+  .instructorsContainer {
+    height: 10vh;
   }
 
-  .notesContainer{
+  .notesContainer {
     height: 7vh;
   }
 
-  .buttonGroup{
+  .buttonGroup {
     margin-top: 0.25vh;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .medicDataContainer {
+    gap: 1rem;
+  }
+
+  .buttonGroup {
+    margin-top: 4.4vh;
   }
 }

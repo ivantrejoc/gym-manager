@@ -51,29 +51,30 @@ const DatosMedicosSheet = () => {
             subheader={
               <ListSubheader
                 sx={{
-                  height: 1 / 4,
+                  height: "25%",
                   width: 1,
                   fontFamily: "montserrat",
                   fontSize: "0.75rem",
                   fontWeight: 700,
                   justifyContent: "flex-start",
+                  textAlign: "left",
                   color: "#000",
                   background: "none"
                 }}
                 component="div"
                 id="nested-list-subheader"
               >
-                Instructores
+                <p className={styles.subtitle}>Instructores</p>
               </ListSubheader>
             }
           >
-            <ListItem sx={{ width: 1, height: 1 / 4 }}>
+            <ListItem sx={{ width: 1, height: "25%" }}>
               <p className={styles.instructor}>Pedro Pérez</p>
             </ListItem>
-            <ListItem sx={{ width: 1 }}>
+            <ListItem sx={{ width: 1, height: "25%" }}>
               <p className={styles.instructor}>Pedro Pérez</p>
             </ListItem>
-            <ListItem sx={{ width: 1 }}>
+            <ListItem sx={{ width: 1, height: "25%" }}>
               <p className={styles.instructor}>Pedro Pérez</p>
             </ListItem>
           </List>
@@ -82,53 +83,52 @@ const DatosMedicosSheet = () => {
             className={styles.list}
             subheader={
               <ListSubheader
-              sx={{
-                height: 1 / 4,
-                width: 1,
-                fontFamily: "montserrat",
-                fontSize: "0.75rem",
-                fontWeight: 700,
-                justifyContent: "flex-start",
-                color: "#000",
-                background: "none"
-              }}
-              
+                sx={{
+                  height: "25%",
+                  width: 1,
+                  fontFamily: "montserrat",
+                  fontSize: "0.75rem",
+                  fontWeight: 700,
+                  justifyContent: "flex-start",
+                  textAlign: "left",
+                  color: "#000",
+                  background: "none"
+                }}
+                component="div"
                 id="nested-list-subheader"
               >
-                Clases
+                <p className={styles.subtitle}>Instructores</p>
               </ListSubheader>
             }
           >
-            <ListItem sx={{ width: 1}}>
+            <ListItem sx={{ width: 1, height: "25%" }}>
               <p className={styles.instructor}>TRX</p>
             </ListItem>
-            <ListItem sx={{ width: 1 }}>
+            <ListItem sx={{ width: 1, height: "25%" }}>
               <p className={styles.instructor}>Crossfit</p>
             </ListItem>
-            <ListItem sx={{ width: 1 }}>
+            <ListItem sx={{ width: 1, height: "25%" }}>
               <p className={styles.instructor}>Zumba</p>
             </ListItem>
           </List>
         </section>
 
         <section className={styles.notesContainer}>
-          
-            <h3 className={styles.subtitle}>Observaciones</h3>
-            <div className={styles.notes}>
-              <p className={styles.data}>Inhalador</p>
-            
+          <h3 className={styles.subtitle}>Observaciones</h3>
+          <div className={styles.notes}>
+            <p className={styles.data}>Inhalador</p>
           </div>
         </section>
         <div className={styles.buttonGroup}>
-        <button className={styles.button}>
-          <p className={styles.textButton}>Editar</p>
-        </button>
-        <button className={styles.button}>
-          <p className={styles.textButton}>Borrar</p>
-        </button>
-        <button className={styles.button}>
-          <p className={styles.textButton}>Cerrar</p>
-        </button>
+          <button className={styles.button}>
+            <p className={styles.textButton}>Editar</p>
+          </button>
+          <button className={styles.button}>
+            <p className={styles.textButton}>Borrar</p>
+          </button>
+          <button className={styles.button}>
+            <p className={styles.textButton}>Cerrar</p>
+          </button>
         </div>
       </div>
     </section>
