@@ -215,7 +215,10 @@
   }
 
   .buttonGroup {
-    margin-top: 0.25vh;
+    margin-top: 0.1vh;
+  }
+  .button{
+    height: 1.5rem;
   }
 }
 
