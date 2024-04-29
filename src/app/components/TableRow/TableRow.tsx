@@ -1,23 +1,36 @@
-import { StatusChip } from "../StatusChip";
+import { Avatar, Chip } from "@mui/material";
 import tableRowStyles from "./tableRow-styles.module.css";
 
-const TableRow = () => {
+interface RowProps {
+  names: string,
+  lastNames: string,
+  dni: number,
+  associate: number, 
+ 
+}
+
+const TableRow = ({names, lastNames, dni , associate}: RowProps ) => {
+
+  const status = "activo";
+
+
   return (
     <tr className={tableRowStyles.rowLayout}>
-      <td className={tableRowStyles.td1}>
-        <input type="checkbox" className={tableRowStyles.checkbox} />
+      <td className={tableRowStyles.td1}>        
         <div className={tableRowStyles.nombreRow}>
-          <p>Pedro Castillo</p>
+          <p>{names}  {lastNames}</p>
         </div>
       </td>
       <td className={tableRowStyles.td2}>
-        <p className={tableRowStyles.idRow}>13465879</p>
+        <p className={tableRowStyles.idRow}>{dni}</p>
       </td>
       <td className={tableRowStyles.td3}>
-        <StatusChip />        
+        {status === "activo"? (<Chip variant="outlined" color="success"
+label="Activo" avatar={<Avatar sx={{background: "#AAF362" }}>A</Avatar>} />) : (<Chip variant="outlined" color="error"
+label="Inactivo" avatar={<Avatar sx={{background: "#F64314", color: "#FFFFFF" }}>I</Avatar>} />)}        
       </td>
       <td className={tableRowStyles.td4}>
-        <p className={tableRowStyles.socioRow}>123456</p>
+        <p className={tableRowStyles.socioRow}>{associate}</p>
       </td>
       <td className={tableRowStyles.td5}>
         <button className={tableRowStyles.button}>

@@ -2,6 +2,7 @@ import { AppRouterCacheProvider } from '@mui/material-nextjs/v13-appRouter';
 import "./globals.css";
 import type { Metadata } from "next";
 import { Inter, Montserrat } from "next/font/google";
+import { StoreProvider } from '../redux';
 
 const inter = Inter({ subsets: ["latin"] });
 const montserrat = Montserrat({ subsets: ["latin"] });
@@ -21,7 +22,10 @@ export default function RootLayout({
       <body className=
       {montserrat.className}>
         <AppRouterCacheProvider>
-        {children}
+          <StoreProvider>
+          {children}
+          </StoreProvider>
+        
         </AppRouterCacheProvider>
        </body>
     </html>

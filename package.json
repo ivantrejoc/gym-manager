@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "api": "npx json-server --watch db.json --port 3001"
   },
   "dependencies": {
     "@emotion/cache": "^11.11.0",
@@ -14,9 +15,12 @@
     "@emotion/styled": "^11.11.5",
     "@mui/material": "^5.15.15",
     "@mui/material-nextjs": "^5.15.11",
+    "@reduxjs/toolkit": "^2.2.3",
+    "json-server": "^1.0.0-alpha.23",
     "next": "14.1.0",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "react-redux": "^9.1.1"
   },
   "devDependencies": {
     "@types/node": "^20",
