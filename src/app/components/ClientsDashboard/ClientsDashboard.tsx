@@ -14,7 +14,7 @@ const ClientsDashboard = () => {
   const { data, error, isLoading, isFetching } = useGetClientsQuery(null);
 
   const clients = data;
-  
+ 
   //Lógica paginado
   const indexOfLastClient = currentPage * pageSize;
   const indexOfFirstClient = indexOfLastClient - pageSize;
@@ -75,6 +75,7 @@ const ClientsDashboard = () => {
             {currentClients?.map((client: any) => (
               <TableRow
                 key={client.id}
+                id={client.id}
                 names={client.names}
                 lastNames={client.last_name}
                 dni={client.dni}

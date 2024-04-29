@@ -1,8 +1,10 @@
 "use client";
 import { Avatar, Chip } from "@mui/material";
 import tableRowStyles from "./tableRow-styles.module.css";
+import { useRouter } from "next/navigation";
 
 interface RowProps {
+  id: string,
   names: string,
   lastNames: string,
   dni: number,
@@ -10,10 +12,15 @@ interface RowProps {
  
 }
 
-const TableRow = ({names, lastNames, dni , associate}: RowProps ) => {  
+const TableRow = ({id, names, lastNames, dni , associate}: RowProps ) => {  
   const status = "activo";
-  
 
+  // Redirect
+  const router = useRouter();
+
+  const handleRedirect = (id :string) =>{
+    router.push(`/clients/${id}`);
+  };
 
   return (
     <tr className={tableRowStyles.rowLayout}>
@@ -34,7 +41,7 @@ label="Inactivo" avatar={<Avatar sx={{background: "#F64314", color: "#FFFFFF" }}
         <p className={tableRowStyles.socioRow}>{associate}</p>
       </td>
       <td className={tableRowStyles.td5}>
-        <button className={tableRowStyles.button}>
+        <button onClick={()=>{handleRedirect(id)}} className={tableRowStyles.button}>
           <p className={tableRowStyles.label}>Detalles</p>
         </button>
       </td>      
