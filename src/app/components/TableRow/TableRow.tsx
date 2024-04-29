@@ -1,3 +1,4 @@
+"use client";
 import { Avatar, Chip } from "@mui/material";
 import tableRowStyles from "./tableRow-styles.module.css";
 
@@ -9,9 +10,9 @@ interface RowProps {
  
 }
 
-const TableRow = ({names, lastNames, dni , associate}: RowProps ) => {
-
+const TableRow = ({names, lastNames, dni , associate}: RowProps ) => {  
   const status = "activo";
+  
 
 
   return (

@@ -1,16 +1,29 @@
 "use client";
-import { useDispatch, useSelector } from "react-redux";
+import { TablePagination } from "@mui/material";
 import { Pagination } from "../Pagination";
 import TableRow from "../TableRow/TableRow";
 import clientsDasboardStyles from "./clientsDashboard-styles.module.css";
 import { useGetClientsQuery } from "@/app/api/services";
+import { useState } from "react";
 
 const ClientsDashboard = () => {
+  const [currentPage, setCurrentPage] = useState(1);
+  const [pageSize, setPageSize] = useState(5);
+
   //Petición a services Redux Toolkit
   const { data, error, isLoading, isFetching } = useGetClientsQuery(null);
 
   const clients = data;
-  console.log("LOS CLIENTES EN CLIENTS DASHBOARD: ", clients);
+  
+  //Lógica paginado
+  const indexOfLastClient = currentPage * pageSize;
+  const indexOfFirstClient = indexOfLastClient - pageSize;
+  const currentClients = clients?.slice(indexOfFirstClient, indexOfLastClient);
+
+  const pagination = (pageNumber: number) => {
+    setCurrentPage(pageNumber);
+  };
+
 
   return (
     <div className={clientsDasboardStyles.layout}>
@@ -40,7 +53,7 @@ const ClientsDashboard = () => {
             <tr className={clientsDasboardStyles.itemsHeader}>
               <th className={clientsDasboardStyles.th1}>
                 <div className={clientsDasboardStyles.nombre}>
-                  <p>Nombre y apellido</p>
+                  <p>Nombres y apellidos</p>
                 </div>
               </th>
               <th className={clientsDasboardStyles.th2}>
@@ -59,7 +72,7 @@ const ClientsDashboard = () => {
           </thead>
 
           <tbody className={clientsDasboardStyles.tbody}>
-            {clients?.map((client) => (
+            {currentClients?.map((client: any) => (
               <TableRow
                 key={client.id}
                 names={client.names}
@@ -70,7 +83,11 @@ const ClientsDashboard = () => {
             ))}
           </tbody>
           <tfoot className={clientsDasboardStyles.footerLayout}>
-            <Pagination />
+            <Pagination
+            pageSize={pageSize}
+            clients={clients || []}
+            currentPage={currentPage}
+            pagination={pagination} />
           </tfoot>
         </table>
       </div>

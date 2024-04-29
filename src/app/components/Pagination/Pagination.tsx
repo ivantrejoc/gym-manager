@@ -1,34 +1,48 @@
+import { Client } from "@/app/api/services";
 import paginationStyles from "./pagination-styles.module.css";
 import Image from "next/image";
 
+interface PaginationProps{
+    pageSize: number,
+    clients: Client[],
+    currentPage: number,
+    pagination: (pageNumber: number)=> void
+}
 
-const Pagination = () => {
+const Pagination = ({pageSize, clients, currentPage, pagination}: PaginationProps) => {
+
+    const pageNumbers = [];
+    for(let i = 1; i <= Math.ceil(clients.length / pageSize); i++){
+        pageNumbers.push(i);
+    };
+
+    const totalPages = pageNumbers.length;
+
   return (
-    <tr className={paginationStyles.container}>
-        <td className={paginationStyles.selector}>
-            <p className={paginationStyles.text}>Filas por pag:</p>
-            <select name="page" id="page" className={paginationStyles.select}>
-                <option value="1" className={paginationStyles.options}>1</option>
-                <option value="2" className={paginationStyles.options}>2</option>
-                <option value="3" className={paginationStyles.options}>3</option>
-                <option value="4" className={paginationStyles.options}>4</option>
-                <option value="5" className={paginationStyles.options}>5</option>
-            </select>
-        </td>
+    <tr className={paginationStyles.container}>   
         <td className={paginationStyles.pageIndex}>
-            <p className={paginationStyles.textIndex}>1-5 de 13</p>
+            <p className={paginationStyles.textIndex}>{currentPage} de {totalPages}</p>
         </td>
         <td className={paginationStyles.buttonsContainer}>
-            <button type='button' className={paginationStyles.button}> <Image
+            <button type='button' className={paginationStyles.button}
+            onClick={() => pagination(currentPage - 1)}
+            disabled={currentPage === 1}            
+            > <Image
             src="/left-arrow.svg"
             width={24}
             height={24}
-            alt="arrow" /></button> 
-             <button type='button' className={paginationStyles.button}> <Image
+            alt="arrow"          
+            
+            /></button> 
+             <button type='button' className={paginationStyles.button}
+             onClick={() => pagination(currentPage + 1)}
+             disabled={currentPage === pageNumbers.length}
+             > <Image
             src="/right-arrow.svg"
             width={24}
             height={24}
-            alt="arrow" /></button>
+            alt="arrow"
+             /></button>
         </td>
     </tr>
   )
