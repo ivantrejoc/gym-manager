@@ -17,7 +17,6 @@ const TableRow = ({id, names, lastNames, dni , associate}: RowProps ) => {
 
   // Redirect
   const router = useRouter();
-
   const handleRedirect = (id :string) =>{
     router.push(`/clients/${id}`);
   };

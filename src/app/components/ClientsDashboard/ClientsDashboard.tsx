@@ -1,10 +1,15 @@
 "use client";
+import { Controller, SubmitHandler, useForm } from "react-hook-form";
 import { Pagination } from "../Pagination";
 import TableRow from "../TableRow/TableRow";
 import clientsDasboardStyles from "./clientsDashboard-styles.module.css";
+import SearchSharpIcon from "@mui/icons-material/SearchSharp";
 import { useGetClientsQuery } from "@/app/api/services";
 import { useState } from "react";
 
+interface FormData {
+  input: String;
+}
 
 const ClientsDashboard = () => {
   const [currentPage, setCurrentPage] = useState(1);
@@ -14,7 +19,19 @@ const ClientsDashboard = () => {
   const { data, error, isLoading, isFetching } = useGetClientsQuery(null);
 
   const clients = data;
- 
+
+  // Lógica searchBar
+  const {
+    register,
+    setValue,
+    handleSubmit,
+    formState: { errors }
+  } = useForm<FormData>();
+
+  const onSubmit = handleSubmit((data) =>
+    console.log("LOS DATOS DE SEARCH BAR: ", data)
+  );
+
   //Lógica paginado
   const indexOfLastClient = currentPage * pageSize;
   const indexOfFirstClient = indexOfLastClient - pageSize;
@@ -23,7 +40,6 @@ const ClientsDashboard = () => {
   const pagination = (pageNumber: number) => {
     setCurrentPage(pageNumber);
   };
-
 
   return (
     <section className={clientsDasboardStyles.layout}>
@@ -37,13 +53,23 @@ const ClientsDashboard = () => {
       <div className={clientsDasboardStyles.divider}></div>
       <div className={clientsDasboardStyles.tableContent}>
         <div className={clientsDasboardStyles.toolBar}>
+          {/* Search bar */}
           <div className={clientsDasboardStyles.search}>
-            <form className={clientsDasboardStyles.frame}>
+            <form onSubmit={onSubmit} className={clientsDasboardStyles.frame}>
               <input
                 className={clientsDasboardStyles.input}
                 placeholder="Buscar por nombre..."
                 type="text"
+                {...register("input")}
               />
+              <button type="submit">
+                <SearchSharpIcon
+                  sx={{
+                    color: "#939393",
+                    ":hover": { color: "#501fa3" }
+                  }}
+                />
+              </button>
             </form>
           </div>
         </div>
@@ -85,10 +111,11 @@ const ClientsDashboard = () => {
           </tbody>
           <tfoot className={clientsDasboardStyles.footerLayout}>
             <Pagination
-            pageSize={pageSize}
-            clients={clients || []}
-            currentPage={currentPage}
-            pagination={pagination} />
+              pageSize={pageSize}
+              clients={clients || []}
+              currentPage={currentPage}
+              pagination={pagination}
+            />
           </tfoot>
         </table>
       </div>
