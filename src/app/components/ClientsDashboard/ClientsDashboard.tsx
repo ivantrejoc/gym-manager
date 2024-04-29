@@ -1,10 +1,10 @@
 "use client";
-import { TablePagination } from "@mui/material";
 import { Pagination } from "../Pagination";
 import TableRow from "../TableRow/TableRow";
 import clientsDasboardStyles from "./clientsDashboard-styles.module.css";
 import { useGetClientsQuery } from "@/app/api/services";
 import { useState } from "react";
+
 
 const ClientsDashboard = () => {
   const [currentPage, setCurrentPage] = useState(1);
@@ -26,7 +26,7 @@ const ClientsDashboard = () => {
 
 
   return (
-    <div className={clientsDasboardStyles.layout}>
+    <section className={clientsDasboardStyles.layout}>
       {/* Header */}
       <div className={clientsDasboardStyles.header}>
         <div className={clientsDasboardStyles.content}>
@@ -91,7 +91,7 @@ const ClientsDashboard = () => {
           </tfoot>
         </table>
       </div>
-    </div>
+    </section>
   );
 };
 export default ClientsDashboard;
